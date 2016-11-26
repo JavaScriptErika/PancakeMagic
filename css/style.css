@@ -1,0 +1,174 @@
+/*Containers*/
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: cursive;
+  background-color: rgb(254, 250, 238);
+}
+
+.container {
+  padding-left: 1.5em;
+  padding-right: 1.5em;
+  margin: 0 auto;
+}
+
+
+/* Page elements */
+
+h1 {
+  margin-top: 0;
+}
+
+header {
+  height: 100vh;
+  background: url(../img/stackofflapperjacks.jpg) no-repeat center center fixed;
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  justify-content: center;
+}
+
+article h4 {
+  text-align: center;
+}
+
+article {
+  margin-top: 3em;
+}
+
+figure {
+  text-align: center;
+}
+
+footer {
+  margin-top: 3em;
+  height: 4em;
+  background-color: rgb(101, 22, 113);
+  width: 100&;
+}
+
+
+/* Class Selectors */
+
+.headWrap {
+  position: relative;
+  background-color: rgba(125, 56, 0, .8);
+  padding: 1em;
+  border-radius: 2.5em;
+  color: rgb(255, 245, 0);
+  font-family: 'Amatic SC', cursive;
+}
+
+.arrow-img {
+  position: absolute;
+  display: inline-block;
+  bottom: -1.5em;
+  width: 1em;
+  height: 1em;
+}
+
+.cat-img,
+.unicorn-img,
+.monster-img {
+  height: 150px;
+}
+
+
+/* Navigation */
+
+ul {
+  width: 100%;
+  padding-left: 0;
+  list-style-type: none;
+  margin: 0;
+}
+
+li a {
+  display: block;
+  padding: .5em;
+  text-decoration: none;
+  border-bottom: 1.5px rgb(174, 193, 75) solid;
+  background-color: rgb(114, 73, 14);
+  color: rgb(254, 250, 238);
+}
+
+li a:hover {
+  opacity: .9;
+}
+
+li a:active {}
+
+nav {
+  text-align: center;
+}
+
+
+/* Media Queries */
+
+@media only screen and (min-width: 768px) {
+  /*container*/
+  .container {
+    margin: 0 auto;
+    padding: 0;
+    width: 90%;
+    max-width: 2000px;
+  }
+  /*header*/
+  .headWrap {
+    width: 50%;
+    padding: 1em;
+    margin: 0 auto;
+    font-size: 1.5em;
+  }
+  /* navigation */
+  ul {
+    background-color: rgb(174, 193, 75);
+    height: 7em;
+  }
+  li {
+    display: inline-block;
+    margin-top: 1.5em;
+  }
+  li a {
+    display: table-cell;
+    vertical-align: middle;
+    padding-left: 1em;
+    padding-right: 1em;
+    height: 4em;
+    border-radius: 1em;
+    line-height: normal;
+  }
+  /*Columns*/
+  article {
+    margin-top: 9em;
+  }
+  .col {
+    float: left;
+    padding-right: 3em;
+    width: 33%;
+  }
+  .col:last-of-type {
+    padding-right: 0;
+  }
+  /*Footer*/
+  footer {
+    margin-top: 9em;
+  }
+}
+
+.cf:before,
+.cf:after {
+  content: " ";
+  /* 1 */
+  display: table;
+  /* 2 */
+}
+
+.cf:after {
+  clear: both;
+}
